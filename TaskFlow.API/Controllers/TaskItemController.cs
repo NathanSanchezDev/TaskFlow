@@ -1,4 +1,3 @@
-// Boilerplate controller code for task items
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TaskFlow.API.Data;
@@ -18,6 +17,7 @@ namespace TaskFlow.API.Controllers
         }
 
         // GET: api/TaskItem
+        //Summary: Get all task items from the database
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TaskItem>>> Get()
         {
@@ -25,6 +25,7 @@ namespace TaskFlow.API.Controllers
         }
 
         // GET: api/TaskItem/{id}
+        //Summary: Get a task item by its ID
         [HttpGet("{id}")]
         public async Task<ActionResult<TaskItem>> Get(int id)
         {
@@ -36,6 +37,7 @@ namespace TaskFlow.API.Controllers
         }
 
         // POST: api/TaskItem
+        //Summary: Create a new task item
         [HttpPost]
         public async Task<ActionResult<TaskItem>> Post(TaskItem taskItem)
         {
@@ -46,6 +48,7 @@ namespace TaskFlow.API.Controllers
         }
 
         // PUT: api/TaskItem/{id}
+        //Summary: Update an existing task item
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(int id, TaskItem taskItem)
         {
@@ -70,6 +73,7 @@ namespace TaskFlow.API.Controllers
         }
 
         // DELETE: api/TaskItem/{id}
+        //Summary: Delete a task item by its ID
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
