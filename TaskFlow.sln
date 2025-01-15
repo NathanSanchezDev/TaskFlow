@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskFlow.API", "TaskFlow.API\TaskFlow.API.csproj", "{CD15C6B8-2F9A-4A88-AAA7-C81BA5E5666C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskFlow.Client", "TaskFlow.Client\TaskFlow.Client.csproj", "{28A2CCF6-32B0-4B7E-9893-5150FB1D033B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{CD15C6B8-2F9A-4A88-AAA7-C81BA5E5666C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD15C6B8-2F9A-4A88-AAA7-C81BA5E5666C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD15C6B8-2F9A-4A88-AAA7-C81BA5E5666C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28A2CCF6-32B0-4B7E-9893-5150FB1D033B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28A2CCF6-32B0-4B7E-9893-5150FB1D033B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28A2CCF6-32B0-4B7E-9893-5150FB1D033B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28A2CCF6-32B0-4B7E-9893-5150FB1D033B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

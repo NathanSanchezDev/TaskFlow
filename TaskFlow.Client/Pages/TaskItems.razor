@@ -1,0 +1,59 @@
+@page "/taskitems"
+@using TaskFlow.Client.Services
+@using TaskFlow.Client.Models
+@inject TaskItemService TaskItemService
+
+<h3>Task Items</h3>
+
+@if (taskItems == null)
+{
+    <p><em>Loading...</em></p>
+}
+else if (!taskItems.Any())
+{
+    <p>No task items found.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Due Date</th>
+                <th>Status</th>
+                <th>ProjectId</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var task in taskItems)
+            {
+                <tr>
+                    <td>@task.Id</td>
+                    <td>@task.Title</td>
+                    <td>@task.Description</td>
+                    <td>@task.DueDate.ToString("g")</td>
+                    <td>@task.Status</td>
+                    <td>@task.ProjectId</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<TaskItem>? taskItems;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            taskItems = await TaskItemService.GetTaskItemsAsync();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching task items: {ex.Message}");
+        }
+    }
+}
